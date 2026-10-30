@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Management System</h1>
+
+    <p class="subtitle">
+        Manage student records easily
+    </p>
+
+
+    <!-- Student Form -->
+
+    <div class="card">
+
+        <h2 id="formTitle">Add Student</h2>
+
+        <form id="studentForm">
+
+            <input type="hidden" id="studentId">
+
+            <div class="form-group">
+
+                <label>Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter student name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Course</label>
+
+                <input
+                    type="text"
+                    id="course"
+                    placeholder="Enter course"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Age</label>
+
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Enter age"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit" class="btn-primary">
+                Save Student
+            </button>
+
+            <button
+                type="button"
+                id="cancelBtn"
+                class="btn-secondary"
+                onclick="resetForm()"
+                style="display:none;"
+            >
+                Cancel
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- Search -->
+
+    <div class="card">
+
+        <div class="search-section">
+
+            <input
+                type="number"
+                id="searchId"
+                placeholder="Search student by ID"
+            >
+
+            <button
+                class="btn-primary"
+                onclick="searchStudent()"
+            >
+                Search
+            </button>
+
+            <button
+                class="btn-secondary"
+                onclick="loadStudents()"
+            >
+                Show All
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Students Table -->
+
+    <div class="card">
+
+        <h2>Students</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Email</th>
+
+                <th>Course</th>
+
+                <th>Age</th>
+
+                <th>Actions</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="studentTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
